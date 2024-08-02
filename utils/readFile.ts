@@ -6,15 +6,12 @@ export const readFile = async (): Promise<any[] | undefined> => {
   let jsonData: any[] = [];
   let headers: string[] | null = [];
   try {
-    // console.log("Started Reading");
     const asset = Asset.fromModule(require(`../assets/files/data.csv`));
     await asset.downloadAsync();
     const fileUri = asset.localUri || "";
     const file = await FileSystem.readAsStringAsync(fileUri, {
       encoding: FileSystem.EncodingType.UTF8,
     });
-
-    // console.log("File Read As String", file.length, getTime(started));
 
     if (file.length) {
       const rows = file.split("\n");
@@ -28,10 +25,8 @@ export const readFile = async (): Promise<any[] | undefined> => {
       }
     }
 
-    // console.log("Finished Reading", jsonData.length, getTime(started));
     return jsonData;
   } catch (err) {
-    // console.log("Reading Excel Err", getTime(started));
     console.log(err);
   }
 };

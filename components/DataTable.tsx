@@ -45,13 +45,10 @@ const CustomDataTable: React.FC<DataTableProps> = ({ data }) => {
   });
 
   const onFilter = (clear?: boolean) => {
-    // console.log("Filter Started");
     const filtered =
       !filter.query || clear
         ? data
         : data.filter((row) => {
-            // console.log("filter.headerIndex", filter.headerIndex);
-            // console.log("============>", headers[filter.headerIndex]);
             const columnValue = row[filter.headerIndex];
             if (
               columnValue &&
@@ -71,7 +68,6 @@ const CustomDataTable: React.FC<DataTableProps> = ({ data }) => {
       currentPage: 0,
       total: filtered.length,
     });
-    // console.log("Filter Ended");
   };
 
   const renderItem = ({ item: d }: any) => {

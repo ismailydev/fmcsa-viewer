@@ -12,7 +12,6 @@ export default function Index() {
   const fetch = () => {
     setLoading(true);
     readFile().then((res) => {
-      //   console.log("Response", res?.length);
       if (res) {
         setData(res);
       }

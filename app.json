@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fmsca-viewer",
-    "slug": "fmsca-viewer",
+    "name": "fmcsa-viewer",
+    "slug": "fmcsa-viewer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

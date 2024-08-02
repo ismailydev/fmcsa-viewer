@@ -1,5 +1,5 @@
 {
-  "name": "fmsca-viewer",
+  "name": "fmcsa-viewer",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
